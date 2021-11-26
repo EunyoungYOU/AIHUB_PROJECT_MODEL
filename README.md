@@ -10,13 +10,11 @@ https://drive.google.com/file/d/1zYl4nPQaFjkHT2IE5jiQbmetFkHGz7B9/view?usp=shari
   # hyperparmeter 및 translation 등 augmentation에 필요한 hyps 수정 코드 ./data/hyps/hyp.scratch.yaml <br>
   # datapath 코드 ./data/bypy.yaml <br>
   # image, labels 분류 및 처리 코드 ./sorting.ipynb <br>
-  <br>
   
   # training code <br>
   !python train.py --img 480 --batch {batch} --epochs {epochs} --data ./data/bypy.yaml --weights ./weights/bypy_best.pt --name {model_name} <br>
   # runs/train/model_name 경로에 weight와 results 저장 <br>
-  <br>
-  
+    
   # evaluation code <br>
   !python detect.py --weights ./weights/bypy_best.pt --source {source_file_path} --conf-thres {confidence_threshold} <br>
   # runs/detect/exp 폴더에 results 저장 <br>
